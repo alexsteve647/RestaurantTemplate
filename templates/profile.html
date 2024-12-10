@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+	<title>JOHN Restaurant</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='profile_html.css') }}">
+</head>
+<body>
+<div class="textstyle1">
+<div id="container_7b6b87c8"><div class="textstyle2"><div id="container_dfedc4"><div id="container_dfedc4_padding" ><div class="textstyle1"><img src="{{ url_for('static', filename='images/logo.svg') }}" width="1276" height="571" id="img_a2ea536" alt="" title="" /></div>
+<div style="clear:both"></div></div></div><span class="textstyle3"><br/></span></div>
+<div class="textstyle1"><div id="container_483232ce"><div class="textstyle2"><div id="container_4b8ac3c7"><div id="container_4b8ac3c7_padding" ><div class="textstyle1"><div id="menu_1deba85f"><div  id="menu_1deba85f_menualignmentwrapper" ><div  class="menuholder1"><a href="javascript:void(0);">
+	<div id="menuentry_76ab3f7b"  class="menustyle1 menu_1deba85f_mainMenuEntry mobileEntry">
+		<div class="menuentry_text1">
+  <span class="textstyle4">IZV&#274;LNE &#9660;</span>
+		</div>
+	</div>
+</a>
+<a href="{{ url_for('index') }}" style="text-decoration:none">
+	<div id="menuentry_38dcda88"  class="menustyle2 menu_1deba85f_mainMenuEntry normalEntry">
+		<div class="menuentry_text1">
+  <span class="textstyle4">GALVEN&#256;</span>
+		</div>
+	</div>
+</a>
+<a href="{{ url_for('index') }}#menu" style="text-decoration:none">
+	<div id="menuentry_33505e1f"  class="menustyle3 menu_1deba85f_mainMenuEntry normalEntry">
+		<div class="menuentry_text1">
+  <span class="textstyle4">&#274;DIENKARTE</span>
+		</div>
+	</div>
+</a>
+<a href="{{ url_for('contact') }}" style="text-decoration:none">
+	<div id="menuentry_72157568"  class="menustyle4 menu_1deba85f_mainMenuEntry normalEntry">
+		<div class="menuentry_text1">
+  <span class="textstyle4">KONTAKTI</span>
+		</div>
+	</div>
+</a>
+{% if 'username' in session %}
+<a href="javascript:void(0);" style="text-decoration:none">
+	<div id="menuentry_41316cca"  class="menustyle5 menu_1deba85f_mainMenuEntry normalEntry">
+		<div class="menuentry_text1">
+  <span class="textstyle4">PROFILS</span>
+		</div>
+	</div>
+</a>
+<a href="{{ url_for('logout') }}" style="text-decoration:none">
+	<div id="menuentry_1838cf5f"  class="menustyle6 menu_1deba85f_mainMenuEntry normalEntry">
+		<div class="menuentry_text1">
+  <span class="textstyle4">IZRAKSTĪTIES</span>
+		</div>
+	</div>
+</a>
+{% else %}
+<a href="{{ url_for('login') }}#menu" style="text-decoration:none">
+	<div id="menuentry_41316cca"  class="menustyle5 menu_1deba85f_mainMenuEntry normalEntry">
+		<div class="menuentry_text1">
+  <span class="textstyle4">PIESLĒGTIES</span>
+		</div>
+	</div>
+</a>
+<a href="{{ url_for('register') }}#menu" style="text-decoration:none">
+	<div id="menuentry_1838cf5f"  class="menustyle6 menu_1deba85f_mainMenuEntry normalEntry">
+		<div class="menuentry_text1">
+  <span class="textstyle4">REĢISTRĒTIES</span>
+		</div>
+	</div>
+</a>
+{% endif %}
+
+	<script type="text/javascript" src="{{ url_for('static', filename='wsp_menu.js') }}"></script>
+	<script type="text/javascript">
+		var js_menu_1deba85f= new wsp_menu('menu_1deba85f', 'menu_1deba85f', 10, null, true);
+
+        {% if 'username' in session %}
+        js_menu_1deba85f.createMenuForItem('menuentry_76ab3f7b', [
+            "<span class=\"textstyle4\">GALVENĀ</span>", "{{ url_for('index') }}", '',
+            "<span class=\"textstyle4\">ĒDIENKARTE</span>", "{{ url_for('index') }}#menu", '',
+            "<span class=\"textstyle4\">KONTAKTI</span>", "{{ url_for('contact') }}", '',
+            "<span class=\"textstyle4\">PROFILS</span>", "javascript:void(0);", '',
+            "<span class=\"textstyle4\">IZRAKSTĪTIES</span>", "{{ url_for('logout') }}"
+        ]);
+        {% else %}
+        js_menu_1deba85f.createMenuForItem('menuentry_76ab3f7b', [
+            "<span class=\"textstyle4\">GALVENĀ</span>", "{{ url_for('index') }}", '',
+            "<span class=\"textstyle4\">ĒDIENKARTE</span>", "{{ url_for('index') }}#menu", '',
+            "<span class=\"textstyle4\">KONTAKTI</span>", "{{ url_for('contact') }}", '',
+            "<span class=\"textstyle4\">PIESLĒGTIES</span>", "{{ url_for('login') }}#menu", '',
+            "<span class=\"textstyle4\">REĢISTRĒTIES</span>", "{{ url_for('register') }}#menu"
+            ]);
+        {% endif %}
+
+		js_menu_1deba85f.createMenuForItem('menuentry_38dcda88', []);
+		js_menu_1deba85f.createMenuForItem('menuentry_33505e1f', []);
+		js_menu_1deba85f.createMenuForItem('menuentry_72157568', []);
+		js_menu_1deba85f.createMenuForItem('menuentry_41316cca', []);
+		js_menu_1deba85f.createMenuForItem('menuentry_1838cf5f', []);
+
+	</script>
+</div></div></div></div>
+<div style="clear:both"></div></div></div></div>
+</div><div id="container_179fa826"><div id="container_179fa826_padding" ><div class="textstyle1"><span class="textstyle5"><br/></span><span class="textstyle6">Profils  </span></div>
+</div></div><div id="container_b26edf4"><div id="container_b26edf4_padding" ><div class="textstyle1"><img src="{{ url_for('uploaded_file', filename=user.photo_url.split('/')[-1]) }}" id="profile-pic" alt="Profila Foto" title="" /><span class="textstyle7"><br/><br/></span><span class="textstyle8"> </span><div id="container_40e87384"><div id="container_40e87384_padding" ><div class="textstyle2">  <span class="textstyle9">V&#257;rds: </span>
+<span class="textstyle10">{{ user.first_name }}<br/><br/></span><span class="textstyle9">Uzv&#257;rds: </span><span class="textstyle10">{{ user.last_name }}<br/><br/></span><span class="textstyle9">E-pasts: </span>  <span class="textstyle10">{{ user.email }}</span>
+</div>
+</div></div></div>
+<div style="clear:both"></div></div></div><div id="container_ea1f96b"><div class="textstyle1"><div id="container_6a636fcf"><div id="container_6a636fcf_padding" ><div class="textstyle1"><div id="container_4648d381"><div id="container_4648d381_padding" ><div class="textstyle2"><span class="textstyle11">Kontakti</span><span class="textstyle12"><br/><br/>&#9743; +371-62-222-260<br/>&#128204;Ausek&#316;a iela 22, R&#299;ga, LV-1010<br/>&#9201; Pr - Se 8.00 - 18.00 Sv SL&#274;GTS</span></div>
+</div></div><div id="container_1f3d3427"><div id="container_1f3d3427_padding" ><div class="textstyle2"><span class="textstyle11">Darba Laiks</span><span class="textstyle12"><br/><br/>9:00 - 22:00 Pirmdiena <br/>9:00 - 22:00 Otrdiena <br/>9:00 - 22:00 Tre&#353;diena <br/>9:00 - 22:00 Ceturtdiena<br/> 9:00 - 22:00 Piektdiena <br/>9:00 - 22:00 Sestdiena <br/>sl&#275;gts: Sv&#275;tdiena</span></div>
+</div></div><div id="container_71a59ea7"><div id="container_71a59ea7_padding" ><div class="textstyle2"><span class="textstyle11">Atra&#353;an&#257;s vieta</span><span class="textstyle12"><br/><br/>M&#275;s atrodamies <br/><br/>Ausek&#316;a iela 22, <br/>R&#299;ga, LV-1010</span></div>
+</div></div></div>
+<div style="clear:both"></div></div></div></div>
+<div class="textstyle13"><span class="textstyle14"><br/><br/></span></div>
+</div></div>
+</div>  </div>
+</body>
+</html>
