@@ -1,3 +1,5 @@
+# pip install Flask Flask-Session Pillow pyjwt
+
 from flask import Flask, render_template, request, redirect, url_for, send_from_directory, session
 from flask_session import Session
 from datetime import timedelta, datetime
